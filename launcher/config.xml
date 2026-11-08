@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<widget xmlns="http://www.w3.org/ns/widgets" xmlns:tizen="http://tizen.org/ns/widgets" id="https://local.dusk/launcher" version="1.1.0" viewmodes="maximized">
+  <tizen:application id="DuskLaunch.Dusk" package="DuskLaunch" required_version="5.5"/>
+  <tizen:profile name="tv-samsung"/>
+  <tizen:metadata key="http://samsung.com/tv/metadata/force.send.appcontrol.support" value="true"/>
+  <content src="index.html"/>
+  <access origin="https://api.open-meteo.com" subdomains="false"/>
+  <name>Dusk</name>
+  <icon src="assets/icon.png"/>
+  <description>A quiet home for your TV.</description>
+  <tizen:setting screen-orientation="landscape" context-menu="disable" background-support="disable" encryption="disable" install-location="auto" hwkey-event="enable"/>
+  <tizen:privilege name="http://tizen.org/privilege/application.info"/>
+  <tizen:privilege name="http://tizen.org/privilege/application.launch"/>
+  <tizen:privilege name="http://tizen.org/privilege/internet"/>
+  <tizen:privilege name="http://tizen.org/privilege/system"/>
+  <tizen:privilege name="http://tizen.org/privilege/tv.window"/>
+  <tizen:privilege name="http://tizen.org/privilege/tv.inputdevice"/>
+  <feature name="http://tizen.org/feature/screen.size.all"/>
+  <tizen:app-control>
+    <tizen:src name="index.html" reload="disable"/>
+    <tizen:operation name="http://tizen.org/appcontrol/operation/main"/>
+  </tizen:app-control>
+  <tizen:app-control>
+    <tizen:src name="index.html" reload="disable"/>
+    <tizen:operation name="http://tizen.org/appcontrol/operation/default"/>
+  </tizen:app-control>
+</widget>

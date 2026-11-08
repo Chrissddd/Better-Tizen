@@ -1,0 +1,19 @@
+[
+  { "Id": "IkWsFHtOY9.Stremio", "Name": "Synthetic Stremio fixture" },
+  { "Id": "9Ur5IzDKqV.TizenYouTube", "Name": "Synthetic YouTube fixture" },
+  { "Id": "rJeHak5zRg.Spotify", "Name": "Synthetic Spotify fixture" },
+  { "Id": "NuvioTV001.NuvioTV", "Name": "Synthetic Nuvio fixture" },
+  { "Id": "example.synthetic.app01", "Name": "Synthetic App 01" },
+  { "Id": "example.synthetic.app02", "Name": "Synthetic App 02" },
+  { "Id": "example.synthetic.app03", "Name": "Synthetic App 03" },
+  { "Id": "example.synthetic.app04", "Name": "Synthetic App 04" },
+  { "Id": "example.synthetic.app05", "Name": "Synthetic App 05" },
+  { "Id": "example.synthetic.app06", "Name": "Synthetic App 06" },
+  { "Id": "example.synthetic.app07", "Name": "Synthetic App 07" },
+  { "Id": "example.synthetic.app08", "Name": "Synthetic App 08" },
+  { "Id": "example.synthetic.app09", "Name": "Synthetic App 09" },
+  { "Id": "example.synthetic.app10", "Name": "Synthetic App 10" },
+  { "Id": "example.synthetic.app11", "Name": "Synthetic App 11" },
+  { "Id": "example.synthetic.app12", "Name": "Synthetic App 12" },
+  { "Id": "example.synthetic.app13", "Name": "Synthetic App 13" }
+]

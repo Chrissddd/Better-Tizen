@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=1920, initial-scale=1">
+  <meta name="theme-color" content="#f1f2f6">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: file:; img-src 'self' data: file:; connect-src https://api.open-meteo.com; style-src 'self' 'unsafe-inline'; script-src 'self'; object-src 'none'">
+  <title>Dusk</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body data-view="home">
+  <div id="wallpaper" class="wallpaper" aria-hidden="true"></div>
+  <div id="wallpaper-next" class="wallpaper" aria-hidden="true"></div>
+  <div id="ambient-poster" aria-hidden="true" hidden></div>
+  <video id="ambient-video" muted loop playsinline preload="none" aria-hidden="true" hidden></video>
+  <div class="shade" aria-hidden="true"></div>
+  <div id="shell">
+    <header>
+      <h1 id="page-title">Home</h1>
+      <nav aria-label="Main navigation">
+        <button class="nav-button selected" data-view="home">Inputs</button>
+        <button class="nav-button" data-view="apps">Apps</button>
+        <button class="nav-button" data-view="settings">Settings</button>
+      </nav>
+      <div class="header-info">
+        <time id="clock"></time>
+        <p id="date" class="date"></p>
+        <div id="weather" class="weather" hidden><span id="weather-icon" aria-hidden="true"></span><span id="weather-temperature"></span><span id="weather-condition"></span><span class="weather-divider" aria-hidden="true">·</span><span id="weather-city"></span><span id="weather-cached" class="weather-cached" hidden>Recently updated</span></div>
+      </div>
+      <div class="toolbar" aria-label="Quick navigation">
+        <button data-view="apps" aria-label="Open apps"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4h5v5H4zm11 0h5v5h-5zM4 15h5v5H4zm11 0h5v5h-5z"/></svg></button>
+        <button data-view="home" aria-label="Open inputs"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16v8l-4 4H8l-4-4V6zm5 3v4m3-4v4m3-4v4"/></svg></button>
+        <button data-view="settings" aria-label="Open settings"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 3h6l.5 3 2.5 1.5 2.7-1 3 5.2-2.2 2 .1 2.8 2 2-3 5.2-2.7-1L15.5 24l-.5 3H9l-.5-3L6 22.5l-2.7 1-3-5.2 2.2-2-.1-2.8-2-2 3-5.2 2.7 1L8.5 6 9 3z" transform="translate(2 0) scale(.72)"/><circle cx="11" cy="11" r="3"/></svg></button>
+      </div>
+    </header>
+    <main>
+      <section id="home-view" class="view">
+        <span id="salutation" class="sr-only">GOOD EVENING</span>
+        <div id="featured-inputs" class="feature-grid" aria-label="TV inputs and shortcuts"></div>
+        <div class="favorites-area">
+          <h2 class="sr-only">Your favorites</h2>
+          <div id="favorites" class="cards favorites" aria-label="Favorite apps and inputs"></div>
+          <div id="home-empty" class="empty" hidden>
+            <span id="home-empty-detail">Finding installed apps and inputs…</span>
+          </div>
+        </div>
+        <div class="home-footer"><p>Made for your TV.</p><p id="favorite-hint">Hold OK for options</p></div>
+      </section>
+      <section id="apps-view" class="view" hidden>
+        <div class="page-heading"><p>Hold OK to pin an app or rename an input.</p></div>
+        <div id="all-items" class="cards app-grid"></div>
+        <div id="apps-empty" class="empty" hidden><p>No apps or inputs available.</p><span id="apps-empty-detail"></span><button data-action="refresh">Try again</button></div>
+      </section>
+      <section id="settings-view" class="view" hidden>
+        <div class="page-heading"><p>Keep your favorites close. Samsung settings are always available.</p></div>
+        <div class="settings-grid">
+          <button class="setting setting-native" data-action="native-settings"><span>TV settings</span><strong>Advanced</strong><small>Picture, sound, network and Bluetooth</small></button>
+          <button class="setting setting-favorites" data-action="reset-favorites"><span>Favorites</span><strong>Automatic</strong><small>Use your devices and the apps you open</small></button>
+          <button class="setting setting-refresh" data-action="refresh"><span>Apps &amp; inputs</span><strong>Refresh</strong><small>Find available apps and connected devices</small></button>
+          <button class="setting setting-home" data-action="samsung-home"><span>Samsung Home</span><strong>Original</strong><small>Open the original home screen</small></button>
+        </div>
+        <button class="close-setting" data-action="exit">Close Dusk</button>
+        <p id="device-status" class="device-status"></p>
+        <p class="weather-credit">Weather data by Open-Meteo · CC BY 4.0</p>
+      </section>
+    </main>
+  </div>
+  <div id="source-view" hidden>
+    <div class="source-osd"><span id="source-title"></span><span>Press Back to return home</span></div>
+  </div>
+  <div id="modal" class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title" hidden>
+    <div class="dialog"><p class="eyebrow">DUSK</p><h2 id="modal-title"></h2><p id="modal-description"></p><div id="modal-actions"></div></div>
+  </div>
+  <div id="toast" class="toast" role="status" hidden></div>
+  <script src="config.js"></script>
+  <script src="app.js"></script>
+  <script src="weather.js"></script>
+</body>
+</html>

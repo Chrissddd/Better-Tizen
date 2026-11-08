@@ -1,0 +1,1 @@
+<Project Sdk="Microsoft.NET.Sdk"><PropertyGroup><OutputType>Exe</OutputType><TargetFramework>net6.0</TargetFramework><AssemblyName>QuietPowerCheck</AssemblyName><UseAppHost>false</UseAppHost><ImplicitUsings>disable</ImplicitUsings><DebugType>none</DebugType></PropertyGroup></Project>

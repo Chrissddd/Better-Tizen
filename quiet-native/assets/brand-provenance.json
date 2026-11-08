@@ -1,0 +1,12 @@
+{
+  "playstation5": {
+    "source": "https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/playstation5.svg",
+    "original_sha256": "5160f1d669ea419432da154ebcbb3fb72851c966fcf9b874cc784a9eecd01d5e",
+    "changes": "white fill; cropped whitespace around wordmark"
+  },
+  "playstation": {
+    "source": "https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/playstation.svg",
+    "original_sha256": "b68b4d7b63443759b9c4d77a5501c5758eeae06a6d594d278d5eb6cb4d3dbbe4",
+    "changes": "white fill"
+  }
+}

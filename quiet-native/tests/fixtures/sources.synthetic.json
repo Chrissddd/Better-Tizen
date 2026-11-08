@@ -1,0 +1,11 @@
+{
+  "fixture_note": "Entirely synthetic parser test data, not a TV capture. Source enum values exercise the QN85F translation in code.",
+  "sources": [
+    { "sourceType": 13, "type": "HDMI", "editName": "Apple%20TV", "connected": true },
+    { "sourceType": 15, "type": "HDMI", "editName": "Synthetic speaker", "connected": true },
+    { "sourceType": 16, "type": "HDMI", "editName": "Synthetic console on HDMI 4", "connected": false },
+    { "sourceType": 0, "type": "TV", "name": "Synthetic broadcast tuner", "connected": true },
+    { "sourceType": 32, "type": "USB", "name": "Synthetic USB device", "connected": true },
+    { "sourceType": 99, "type": "NETWORK", "name": "Synthetic network source", "connected": true }
+  ]
+}

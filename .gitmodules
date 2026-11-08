@@ -1,0 +1,3 @@
+[submodule "research/quiet-tizen"]
+	path = research/quiet-tizen
+	url = https://github.com/jss8649/quiet-tizen.git

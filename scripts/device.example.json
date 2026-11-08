@@ -1,0 +1,5 @@
+{
+  "tv_ip": "192.0.2.50",
+  "callback_ip": "192.0.2.10",
+  "sdb": "/path/to/tizen-studio/tools/sdb"
+}

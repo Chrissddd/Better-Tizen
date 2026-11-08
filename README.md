@@ -4,6 +4,23 @@ A custom Samsung Tizen Home menu based on the native .NET/NUI launcher from [Qui
 
 The native launcher is in [`quiet-native/`](quiet-native/). The earlier, separate web launcher is in [`launcher/`](launcher/).
 
+## Screenshots
+
+Captured directly from the native launcher on the tested Samsung TV, 8 November 2026.
+
+![Home with Apple TV and PlayStation 5 recent sources, favorites and Oslo weather](docs/screenshots/home.png)
+
+Samsung's screenshot capture excludes the hardware video layer, so the ambient video area appears black here. Installed apps and optional artwork reflect the tested TV.
+
+<details>
+<summary>App library and quick settings</summary>
+
+![Installed app library with remote-control navigation](docs/screenshots/apps.png)
+
+![Quick settings for volume, brightness, game mode, sleep timer, sound and connections](docs/screenshots/settings.png)
+
+</details>
+
 ## Features
 
 - Home, Apps and Settings pages with remote-control navigation.
@@ -53,7 +70,7 @@ The operation and temporary-root tools require **Python 3.12 or later**. Build t
 
 Snoopy videos, matching poster images, personal wallpapers, private app settings and artwork retrieved from the TV are omitted from the public repository. Supply media you are entitled to use; the native build also works without ambient videos. Missing optional app artwork uses a text fallback. Instructions and expected filenames are in the [native README](quiet-native/README.md#optional-media-and-settings).
 
-Device snapshots, reports, credentials, generated packages and proprietary binaries stay local. The public source does not configure a Samsung account or a Nuvio account.
+Private device snapshots, diagnostic reports, credentials, generated packages and proprietary binaries stay local. The public source does not configure a Samsung account or a Nuvio account.
 
 ## Credits and licenses
 

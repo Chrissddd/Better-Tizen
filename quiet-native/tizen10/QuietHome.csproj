@@ -1,0 +1,19 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>Exe</OutputType><TargetFramework>net8.0</TargetFramework>
+    <AssemblyName>BetterTizenHome</AssemblyName><UseAppHost>false</UseAppHost>
+    <ImplicitUsings>disable</ImplicitUsings><Nullable>disable</Nullable>
+    <DebugType>portable</DebugType><EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+    <TizenReferenceDir Condition="'$(TizenReferenceDir)' == ''">$(MSBuildThisFileDirectory).local/packages/tizen.net.api13-13.0.0.19198/ref/net6.0</TizenReferenceDir>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="src/*.cs" />
+    <Compile Include="../src/AppLibrary.cs" Link="Shared/AppLibrary.cs" />
+    <Compile Include="../src/NativeData.cs" Link="Shared/NativeData.cs" />
+    <Compile Include="../NativeAmbient.cs" Link="Shared/NativeAmbient.cs" />
+  </ItemGroup>
+  <ItemGroup><Reference Include="$(TizenReferenceDir)/*.dll"><Private>false</Private></Reference></ItemGroup>
+  <Target Name="CheckTizenReferences" BeforeTargets="ResolveReferences">
+    <Error Condition="!Exists('$(TizenReferenceDir)/Tizen.NUI.dll')" Text="Official Tizen API13 references are missing. Run python3 build.py first." />
+  </Target>
+</Project>

@@ -1,0 +1,9 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup><OutputType>Exe</OutputType><TargetFramework>net8.0</TargetFramework><UseAppHost>false</UseAppHost><EnableDefaultCompileItems>false</EnableDefaultCompileItems><ImplicitUsings>disable</ImplicitUsings><Nullable>disable</Nullable></PropertyGroup>
+  <ItemGroup>
+    <Compile Include="../../tests/DataTests.cs" Link="DataTests.cs" />
+    <Compile Include="../../src/NativeData.cs" Link="NativeData.cs" />
+    <Compile Include="../../src/AppLibrary.cs" Link="AppLibrary.cs" />
+    <Content Include="../../tests/fixtures/sources.synthetic.json;../../tests/fixtures/apps.synthetic.json" CopyToOutputDirectory="PreserveNewest" TargetPath="fixtures/%(Filename)%(Extension)" />
+  </ItemGroup>
+</Project>

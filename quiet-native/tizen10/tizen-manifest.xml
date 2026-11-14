@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns="http://tizen.org/ns/packages" api-version="10.0" package="org.bettertizen.home" version="1.0.2">
+  <profile name="tv" />
+  <ui-application appid="org.bettertizen.home" exec="BetterTizenHome.dll" type="dotnet" multiple="false" taskmanage="true" nodisplay="false" launch_mode="single">
+    <label>Quiet Home</label><icon>quiet.png</icon>
+    <app-control><operation name="http://tizen.org/appcontrol/operation/main" /></app-control>
+    <app-control><operation name="http://tizen.org/appcontrol/operation/default" /></app-control>
+  </ui-application>
+  <feature name="http://tizen.org/feature/screen.size.normal.1080.1920">true</feature>
+  <privileges>
+    <privilege>http://tizen.org/privilege/internet</privilege>
+    <privilege>http://tizen.org/privilege/appmanager.launch</privilege>
+    <privilege>http://tizen.org/privilege/application.info</privilege>
+  </privileges>
+</manifest>
